@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="../../static/style.css">
+<script src="../../static/script.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo"><b>Quizz In</b></a>
+  <div class="header-right">
+    <a class="active" href="../index/">Home</a>
+    <a href="../login/">logout</a>
+  </div>
+</div>
+
+<div class="newquiz" style="padding-left:20px">
+  <div class="card">
+  <div class="container">
+    <h3>Quiz Details</h3>
+    <input id="q-name" type="text" name="" placeholder="Enter Quiz Name"> 
+    <textarea id="description" placeholder="Enter Description">
+    </textarea> 
+    <button class="q-next" onclick="createquiz()">Next</button>
+  </div>
+</div>
+  
+<div class="card" id="quest-card">
+  <div class="container">
+    <h3>Add Quiz Questions (upto 10)</h3>
+    <input id="question" type="text" name="" placeholder="Enter the question"> 
+    <input id="mcq" type="text" name="" placeholder="Enter multiple options using comma separater eg: aa,bb,...">
+    <input id="answer" type="text" name="" placeholder="Enter the right answer">
+    </textarea> 
+    <button class="q-add" onclick="createquest()">Add</button>
+  </div>
+</div>
+
+<div class="card-questions" id="card-questions">
+  <div class="container">
+    <h3>Your Questions</h3>
+    <div class="renderquest" id="renderquest">
+      <div id="questhere">
+        <h4></h4>
+    <p></p>
+    <p></p>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

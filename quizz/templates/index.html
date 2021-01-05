@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../../static/style.css">
+<script src="../../static/script.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo"><b>Quizz In</b></a>
+  <div class="header-right">
+    <a class="active" >Home</a>
+    <a id="addquiz" href="../new/">Add Quiz</a>
+    <a href="../login/">logout</a>
+  </div>
+</div>
+
+<div class="allquiz" id="allquiz" style="padding-left:20px">
+</div>
+
+
+<div class="index-questions" id="indexquestions">
+  <div class="container">
+    <h3 style="border-bottom: 1px solid;">Your Questions <span class="closetab" onclick="closetab()">close</span></h3>
+    <div class="renderquest" id="indexquest">
+      <div id="questhere">
+        <h4></h4>
+    <p></p>
+    <p></p>
+      </div>
+    
+    </div>
+  </div>
+</div>
+<script>
+  if(localStorage.getItem("quser") !== "superadmin"){
+    document.getElementById("addquiz").style.display="none";
+  }
+</script>
+</body>
+</html>
